@@ -6,6 +6,8 @@
 
 package com.mrnom.framework;
 
+import android.content.SharedPreferences;
+
 import java.io.*;
 
 /**
@@ -19,4 +21,6 @@ public interface IFileIO
     public InputStream readFile(String fileName) throws IOException;
     
     public OutputStream writeFile(String fileName) throws IOException;
+
+    public SharedPreferences getPreferences();
 }
