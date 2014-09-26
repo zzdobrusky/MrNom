@@ -25,6 +25,8 @@ public interface IMusic
     public boolean isPlaying();
     
     public boolean isLooping();
+
+    public boolean isStopped();
     
     public void dispose();
 }

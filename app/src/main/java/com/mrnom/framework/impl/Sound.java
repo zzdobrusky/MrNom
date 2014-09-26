@@ -9,17 +9,24 @@ import com.mrnom.framework.ISound;
  */
 public class Sound implements ISound
 {
-    public Sound(SoundPool soundPool, int soundId) {}
+    int _soundId;
+    SoundPool _soundPool;
+
+    public Sound(SoundPool soundPool, int soundId)
+    {
+        _soundId = soundId;
+        _soundPool = soundPool;
+    }
 
     @Override
     public void play(float volume)
     {
-
+        _soundPool.play(_soundId, volume, volume, 0, 0, 1);
     }
 
     @Override
     public void dispose()
     {
-
+        _soundPool.unload(_soundId);
     }
 }
